@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificador de Números</title>
+</head>
+<body>
+  <style> 
+    body{
+        background-color: rgb(0, 0, 0);
+        color: rgb(226, 85, 85);
+        font: normal 20pt Arial;
+    }
+    h2{ color: rgb(226, 85, 85);
+
+    }
+    h1{
+        color: white; 
+        
+    }
+
+    img{
+        border-radius: 0%;
+        width: 130px;
+        height: 130px;
+    }
+
+
+
+</style>
+<h1> Paloma Duarte do Nascimento 23114290179</h1>
+ <h2>Verificador de Números!!</h2>
+
+  <form>
+    <label for="numbers">Digite os números (separados por vírgula):</label><br>
+    <input type="text" id="numbers"><br>
+    <button type="button" onclick="checkNumbers()">Verificar</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    function checkNumbers() {
+      var input = document.getElementById("numbers").value;
+      var numbers = input.split(",");
+
+      var resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = ""; // Limpa o conteúdo anterior
+
+      for (var i = 0; i < numbers.length; i++) {
+        var number = parseFloat(numbers[i]);
+
+        var output;
+        if (isNaN(number)) {
+          output = "Entrada inválida";
+        } else if (number > 0) {
+          output = "Positivo";
+        } else if (number < 0) {
+          output = "Negativo";
+        } else {
+          output = "Zero";
+        }
+
+        var p = document.createElement("p");
+        p.innerHTML = numbers[i] + ": " + output;
+        resultDiv.appendChild(p);
+      }
+    }
+
+   
+  </script>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+ 
+
+  <div id="foto">
+
+      <img id="imagem" src="logoFot.png" alt="Foto do dia">
+
+  </div>
+
+
+ </body>
+</html>

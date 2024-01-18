@@ -1,0 +1,35 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+  </head>
+  <body>
+    <label for="idade">Digite a idade do nadador:</label>
+    <input type="number" id="idade" name="idade">
+    <button onclick="exibirCategoria()">Exibir</button>
+    <p id="categoria"></p>
+
+    <script>
+      function exibirCategoria() {
+        const idadeInput = document.getElementById("idade").value;
+        let categoria = "";
+
+        if (idadeInput >= 5 && idadeInput <= 7) {
+          categoria = "Infantil A";
+        } else if (idadeInput >= 8 && idadeInput <= 11) {
+          categoria = "Infantil B";
+        } else if (idadeInput >= 12 && idadeInput <= 13) {
+          categoria = "Juvenil A";
+        } else if (idadeInput >= 14 && idadeInput <= 17) {
+          categoria = "Juvenil B";
+        } else {
+          categoria = "Adulto";
+        }
+
+        document.getElementById("categoria").innerHTML = categoria;
+      }
+    </script>
+  </body>
+</html>

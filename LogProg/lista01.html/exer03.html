@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 03 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+</style>
+    </head>
+    <body>
+        <h1>Aluna: Paloma Duarte <br/>
+            Matricula: 23114290179</h1>
+    
+        <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+<h3>Consumo Médio de um Automóvel.</h3>
+
+    <label for="distancia">Distância total percorrida (em km): </label>
+    <input type="number" id="distancia"><br><br>
+
+    <label for="combustivel">Total de combustível gasto (em litros): </label>
+    <input type="number" id="combustivel"><br><br>
+
+    <button onclick="calcularConsumo()">Calcular</button><br><br>
+
+<p id="resultado"></p>
+
+<script>
+function calcularConsumo() {
+// Entradas
+    const distanciaPercorrida = parseFloat(document.getElementById("distancia").value);
+    const combustivelGasto = parseFloat(document.getElementById("combustivel").value);
+
+// Processamento
+    const consumoMedio = distanciaPercorrida / combustivelGasto;
+
+// Saída
+    document.getElementById("resultado").innerHTML = `O consumo médio do automóvel é de ${consumoMedio.toFixed(2)} km/l.`;
+}
+</script>
+</body>
+</html>

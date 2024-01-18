@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Propriedade innerHTML!</title>
+        <script language="javascript" type="text/javascript">
+            function mostarValor() {
+                var elemento = document.getElementById("campo1");
+                var display = document.getElementById("display");
+                if(elemento.value == 10) {
+                display.innerHTML = "Valor igual a 10!";
+                } else {
+                    display.innerHTML = "Valor diferente de 10!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Digite um numero:<input type="text" id="campo1" size="5" />
+        <input type="button" value="mostrar" onclick="mostarValor()" />
+        <br/><p id="display" ><i>Informação</i></p>
+
+    </body>
+
+</html>

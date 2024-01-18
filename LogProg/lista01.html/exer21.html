@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Exercício 21 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(49, 245, 163)
+    }
+    </style>
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+<h3>Verificar aptidão para serviço militar</h3>
+<p>Preencha os dados abaixo:</p>
+
+    <label>Nome:</label>
+    <input type="text" id="nome"><br>
+
+    <label>Sexo:</label>
+    <input type="radio" name="sexo" id="masculino" value="masculino">Masculino
+    <input type="radio" name="sexo" id="feminino" value="feminino">Feminino<br>
+
+    <label>Idade:</label>
+    <input type="number" id="idade"><br>
+
+    <label>Saúde:</label>
+    <input type="radio" name="saude" id="apto" value="apto">Apto
+    <input type="radio" name="saude" id="inapto" value="inapto">Inapto<br>
+
+    <button onclick="verificar()">Verificar</button><br><br>
+
+
+<h2>Resultados</h2>
+    <p>Aptos: <span id="aptos">0</span></p>
+    <p>Inaptos: <span id="inaptos">0</span></p>
+
+<script>
+let aptos = 0;
+let inaptos = 0;
+
+function verificar() {
+let nome = document.getElementById("nome").value;
+let sexo = document.querySelector('input[name="sexo"]:checked').value;
+let idade = parseInt(document.getElementById("idade").value);
+let saude = document.querySelector('input[name="saude"]:checked').value;
+
+if (sexo === "masculino" && idade >= 18 && saude === "apto") {
+aptos++;
+} else {
+inaptos++;
+}
+
+document.getElementById("nome").value = "";
+document.getElementById("masculino").checked = false;
+document.getElementById("feminino").checked = false;
+document.getElementById("idade").value = "";
+document.getElementById("apto").checked = false;
+document.getElementById("inapto").checked = false;
+
+document.getElementById("aptos").innerHTML = aptos;
+document.getElementById("inaptos").innerHTML = inaptos;
+}
+</script>
+</body>
+</html>

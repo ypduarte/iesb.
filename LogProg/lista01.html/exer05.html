@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05 da Lista</title>
+    <style>
+        body{
+            background-color:black; 
+            color:rgb(222, 202, 240);
+            font: normal 20pt Arial
+
+        }
+        h1{ 
+            color:rgb(217, 46, 233)
+        }
+    </style>
+
+    <script language="javascript" type="text/javascript">
+    function salario(){
+    var n1 = document.getElementById("aluno").value;
+    var n2 = document.getElementById("nota").value;
+    var n3 = document.getElementById("notaa").value;
+    var n4 = document.getElementById("notaaa").value;
+    var n5 = document.getElementById("volta");
+    var n7 = (Number(n2) + Number(n3) + Number(n4)) / 3;
+    volta.innerHTML = `A nota média do Aluno: ${n1} é ${n7}`;
+    }
+    
+    </script>
+    </head>
+    <body>
+        <h1>Aluna: Paloma Duarte <br/>
+            Matricula: 23114290179</h1>
+    
+        <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+    Nome do aluno:
+    <input type="text" id="aluno"></br>
+    </br>
+    Nota 1:
+    <input type="number" id="nota"></br>
+    </br>
+    Nota 2:
+    <input type="number" id="notaa"></br>
+    </br>
+    Nota 3:
+    <input type="number" id="notaaa">
+    <input type="button" value="CALCULAR" onclick="salario()">
+    </br></br>
+    <div id="volta"> Nota Média: </div>
+</body>
+</html>

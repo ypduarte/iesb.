@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calcular conta de luz</title>
+</head>
+<body>
+  <style> 
+    body{
+        background-color: rgb(0, 0, 0);
+        color: rgb(226, 85, 85);
+        font: normal 20pt Arial;
+    }
+    h2{ color: rgb(226, 85, 85);
+
+    }
+    h1{
+        color: white; 
+        
+    }
+
+    img{
+        border-radius: 0%;
+        width: 130px;
+        height: 130px;
+    }
+
+
+
+</style>
+<h1> Paloma Duarte do Nascimento 23114290179</h1>
+     <h2>Calcular conta de luz!!</h2>
+  
+  <form>
+    <label for="tipoCliente">Tipo de cliente:</label>
+    <select id="tipoCliente">
+      <option value="Tipo 1">Tipo 1</option>
+      <option value="Tipo 2">Tipo 2</option>
+      <option value="Tipo 3">Tipo 3</option>
+    </select><br>
+    <label for="consumoKWh">Consumo em kWh:</label>
+    <input type="number" id="consumoKWh"><br>
+    <button type="button" onclick="calcularContaLuz()">Calcular conta de luz</button>
+  </form>
+  <div id="resultado"></div>
+
+  <script>
+    function calcularContaLuz() {
+  var tipoCliente = document.getElementById("tipoCliente").value;
+  var consumoKWh = parseInt(document.getElementById("consumoKWh").value);
+  var valorKWh = 0;
+  var valorConta = 0;
+
+  if (tipoCliente === "Tipo 1") {
+    valorKWh = 0.6;
+  } else if (tipoCliente === "Tipo 2") {
+    valorKWh = 0.48;
+  } else if (tipoCliente === "Tipo 3") {
+    valorKWh = 1.29;
+  }
+
+  valorConta = consumoKWh * valorKWh;
+
+  document.getElementById("resultado").textContent = "Valor da conta de luz: R$ " + valorConta.toFixed(2);
+}
+
+  </script>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div id="foto">
+
+    <img id="imagem" src="logoFot.png" alt="Foto do dia">
+
+</div>
+</body>
+</html>

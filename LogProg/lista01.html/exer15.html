@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 15 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+    </style>
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+
+<h3>Verificar intervalo</h3>
+
+<p>Insira um número:</p>
+
+<input type="text" id="numero">
+
+<button onclick="verificarIntervalo()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+function verificarIntervalo() {
+// Ler o número do input
+var numero = parseInt(document.getElementById("numero").value);
+
+// Verificar se o número está no intervalo de 100 a 200
+if (numero >= 100 && numero <= 200) {
+document.getElementById("resultado").innerHTML = "O número " + numero + " está no intervalo de 100 a 200";
+} else {
+document.getElementById("resultado").innerHTML = "O número " + numero + " não está no intervalo de 100 a 200";
+}
+}
+</script>
+
+</body>
+</html>

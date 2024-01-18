@@ -1,0 +1,37 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEsafio 03 </title>
+  </head>
+  <body>
+    <label for="mes">Digite o número do mês:</label>
+    <input type="number" id="mes" name="mes">
+    <button onclick="exibirMes()">Exibir</button>
+    <p id="mesExtenso"></p>
+
+    <script>
+      function exibirMes() {
+        const mesInput = document.getElementById("mes").value;
+        const meses = [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro"
+        ];
+
+        const mesExtenso = meses[mesInput - 1];
+        document.getElementById("mesExtenso").innerHTML = mesExtenso;
+      }
+    </script>
+  </body>
+</html>

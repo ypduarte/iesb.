@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Dias da Semana</title>
+        <script language="javascript" type="text/javascript">
+            function mostarSituacao() {
+                var dia = parseInt(document.getElementById("dia").value);
+                var display = document.getElementById("display");
+                switch(dia) {
+                    case 1 :
+                        display.innerHTML = "Domingo";
+                        break;
+                    case 2 :
+                        display.innerHTML = "Segunda-feira";
+                        break;
+                    case 3 :
+                        display.innerHTML = "Terça-feira";
+                        break;
+                    case 4 :
+                        display.innerHTML = "Quarta-feira";
+                        break;
+                    case 5 :
+                        display.innerHTML = "Quinta-feira";
+                        break;
+                    case 6 :
+                        display.innerHTML = "Sexta-feira";
+                        break;
+                    case 7 :
+                        display.innerHTML = "Sábado";
+                        break;
+                    default:
+                        display.innerHTML = "Dia inválido";
+                        break;
+
+                }
+
+            }
+            
+        </script>
+    </head>
+    <body>
+        Digite um número:<input type="text" id="dia" size="5" />
+        <input type="button" value="mostrar" onclick="mostarSituacao()" />
+        <br/><p id="display" ><i>Situação</i></p>
+
+    </body>
+
+</html>

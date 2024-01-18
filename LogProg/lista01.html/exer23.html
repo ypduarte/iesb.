@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <title>Exercício 23 da Lista</title>
+    <style>
+        body{
+            background-color:black; 
+            color:rgb(222, 202, 240);
+            font: normal 20pt Arial
+    
+        }
+        h1{ 
+            color:rgb(49, 245, 163)
+        }
+        </style>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+<h3>Verificar número</h3>
+<p>Digite um número:</p>
+<input type="text" id="numero">
+<button onclick="verificar()">Verificar</button>
+<p id="mensagem"></p>
+<script>
+function verificar() {
+var num = parseInt(document.getElementById("numero").value);
+var mensagem = document.getElementById("mensagem");
+if (num > 80) {
+mensagem.innerHTML = "O número é maior que 80.";
+} else if (num < 25) {
+mensagem.innerHTML = "O número é menor que 25.";
+} else if (num == 40) {
+mensagem.innerHTML = "O número é igual a 40.";
+} else {
+mensagem.innerHTML = "O número não atende às condições.";
+}
+}
+</script>
+</body>
+</html>
+

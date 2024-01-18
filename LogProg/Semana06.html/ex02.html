@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Exercício 02</title>
+        <script language="javascript" type="text/javascript">
+            function mostarSituacao() {
+                var numero = Number.parseFloat (document.getElementById("numero").value);
+                var display = document.getElementById("display");
+                var mensagem = " ";
+                var contador = 0;
+                while (contador <= 10) {
+                    mensagem += numero+" x "+contador+" = "+numero*contador+"<br/>";
+                    contador++;
+                }
+                display.innerHTML = mensagem;
+
+            }
+        </script>
+    </head>
+    <body>
+        Digite sua idade:<input type="text" id="numero" size="5"/>
+        <input type="button" value="Mostrar" onclick="mostarSituacao()" />
+        <br/><p id="display" ><i>Situação</i></p>
+
+    </body>
+</html>

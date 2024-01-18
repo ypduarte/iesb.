@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 20 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+    </style>
+<meta charset="UTF-8">
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+<h3>Calculadora de desconto de carros</h3>
+<p>Preencha os dados do carro:</p>
+<label for="ano">Ano:</label>
+<input type="number" id="ano">
+<label for="valor">Valor:</label>
+<input type="number" id="valor">
+<button onclick="calcularDesconto()">Calcular desconto</button>
+<p id="resultado"></p>
+<script>
+// variáveis para contar os carros
+let totalAte2000 = 0;
+let totalGeral = 0;
+
+function calcularDesconto() {
+// obter dados do formulário
+const ano = Number(document.getElementById("ano").value);
+const valor = Number(document.getElementById("valor").value);
+
+// calcular desconto
+let desconto;
+if (ano <= 2000) {
+desconto = valor * 0.12;
+totalAte2000++;
+} else {
+desconto = valor * 0.07;
+}
+
+// exibir resultado na página
+const resultadoElemento = document.getElementById("resultado");
+resultadoElemento.innerHTML += `Desconto: R$ ${desconto.toFixed(2)}<br>`;
+
+
+// atualizar total geral
+totalGeral++;
+
+// perguntar se deseja continuar calculando
+const continuar = confirm("Deseja continuar calculando descontos?");
+if (continuar) {
+// limpar dados do formulário
+document.getElementById("ano").value = "";
+document.getElementById("valor").value = "";
+} else {
+// exibir total de carros com ano até 2000 e total geral
+resultadoElemento.innerHTML += `Total de carros até 2000: ${totalAte2000}<br>`;
+resultadoElemento.innerHTML += `Total geral de carros: ${totalGeral}`;
+}
+}
+</script>
+</body>
+</html>

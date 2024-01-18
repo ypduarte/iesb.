@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 16 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+    </style>
+<meta charset="UTF-8">
+
+</style>
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+
+<h3>Calcular Média do Aluno</h3>
+
+    <label for="nome">Nome do Aluno:</label>
+    <input type="text" id="nome"><br><br>
+    <label for="nota1">Nota 1:</label>
+    <input type="number" id="nota1"><br><br>
+    <label for="nota2">Nota 2:</label>
+    <input type="number" id="nota2"><br><br>
+    <label for="nota3">Nota 3:</label>
+    <input type="number" id="nota3"><br><br>
+    <button onclick="calcularMedia()">Calcular Média</button><br><br>
+    <div id="resultado"></div>
+
+<script>
+function calcularMedia() {
+// Obter os valores dos elementos de entrada
+    const nome = document.getElementById("nome").value;
+    const nota1 = Number(document.getElementById("nota1").value);
+    const nota2 = Number(document.getElementById("nota2").value);
+    const nota3 = Number(document.getElementById("nota3").value);
+
+// Calcular a média aritmética
+    const media = (nota1 + nota2 + nota3) / 3;
+
+// Verificar a menção
+
+
+    let mencao;
+        if (media >= 7) {
+    mencao = "Aprovado";
+        } else if (media >= 5.1) {
+    mencao = "Em Recuperação";
+        } else {
+    mencao = "Reprovado";
+}
+
+// Exibir o resultado na página HTML
+    document.getElementById("resultado").innerHTML = nome + " teve média " + media.toFixed(1) + " e está " + mencao + ".";
+}
+</script>
+</body>
+</html>

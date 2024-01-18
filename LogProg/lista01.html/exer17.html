@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 17 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+    </style>
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+<h3>Contar números no intervalo</h3>
+
+    <p>Insira 80 números abaixo:</p>
+    <textarea id="numeros"></textarea>
+    <br>
+    <button onclick="contarNumeros()">Contar números no intervalo</button>
+    <br><br>
+    <p id="resultado"></p>
+
+<script>
+    function contarNumeros() {
+        var numeros = document.getElementById("numeros").value.split("\n");
+        var contagem = 0;
+            for (var i = 0; i < numeros.length; i++) {
+        var numero = parseInt(numeros[i]);
+            if (!isNaN(numero) && numero >= 10 && numero <= 150) {
+        contagem++;
+}
+}
+    document.getElementById("resultado").innerHTML = "Há " + contagem + " número(s) no intervalo entre 10 e 150.";
+}
+</script>
+</body>
+</html>
+    

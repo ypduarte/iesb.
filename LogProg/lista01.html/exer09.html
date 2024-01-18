@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09 da Lista</title>
+    <style>
+        body{
+            background-color:black; 
+            color:rgb(222, 202, 240);
+            font: normal 20pt Arial
+
+        }
+        h1{ 
+            color:rgb(217, 46, 233)
+        }
+    </style>
+
+<script language="javascript" type="text/javascript">
+    function rendimento(){
+    var n2 = document.getElementById("quantia").value;
+    var n3 = document.getElementById("meses").value;
+    var n4 = document.getElementById("resultadoo");
+    var n7 = (Number(n2) * Number(n3)) * 0.70 / 100
+    resultado.innerHTML = `O rendimento será de ${n7}R$ ao mês`;
+    }
+    
+    </script>
+    </head>
+    <body>
+        <h1>Aluna: Paloma Duarte <br/>
+            Matricula: 23114290179</h1>
+    
+        <h2>IESB OESTE Turma: OADSNM1AC</h2>
+    
+    Valor Depositado:
+    <input type="number" id="quantia"></br>
+    </br>
+    Meses decorrentes na conta poupança:
+    <input type="number" id="meses"></br>
+    <input type="button" value="CALCULAR" onclick="rendimento()">
+    </br></br>
+    <div id="resultado"> Rendimento Final: </div>
+
+</body>
+</html>
+    
+    

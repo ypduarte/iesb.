@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 19 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+    </style>
+<meta charset="UTF-8">
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+    <h3>Contagem de Gênero</h3>
+
+<p>Preencha os dados de 56 pessoas:</p>
+<form id="form1">
+<table>
+<tr>
+<td>Nome:</td>
+<td><input type="text" name="nome"></td>
+</tr>
+<tr>
+<td>Gênero:</td>
+<td>
+<label><input type="radio" name="genero" value="M">Masculino</label>
+<label><input type="radio" name="genero" value="F">Feminino</label>
+</td>
+</tr>
+</table>
+<input type="button" value="Adicionar" onclick="adicionarPessoa()">
+</form>
+<br>
+<p id="listaPessoas"></p>
+<p id="totalGenero"></p>
+
+<script>
+    var lista = []; // array para armazenar as pessoas
+    var totalHomens = 0;
+    var totalMulheres = 0;
+    
+    function adicionarPessoa() {
+    var nome = document.forms["form1"]["nome"].value;
+    var genero = document.forms["form1"]["genero"].value;
+    
+    if (nome == "") {
+    innerHTML("Digite o nome da pessoa.");
+    return;
+    }
+    
+    if (genero == "") {
+    innerHTML("Selecione o gênero da pessoa.");
+    return;
+    }
+    
+    var pessoa = {"nome": nome, "genero": genero};
+    lista.push(pessoa);
+    
+    // atualiza a lista de pessoas
+    var listaPessoas = "";
+    for (var i = 0; i < lista.length; i++) {
+    listaPessoas += lista[i]["nome"] + " - " + (lista[i]["genero"] == "M" ? "Masculino" : "Feminino") + "<br>";
+    }
+    document.getElementById("listaPessoas").innerHTML = listaPessoas;
+    
+    // atualiza a contagem de homens e mulheres
+    if (genero == "M") {
+    totalHomens++;
+    } else {
+    totalMulheres++;
+    }
+    document.getElementById("totalGenero").innerHTML = "Total de homens: " + totalHomens + "<br>Total de mulheres: " + totalMulheres;
+}
+</script>
+</body>
+</html>

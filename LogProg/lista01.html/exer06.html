@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 06 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+</style>
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+    
+
+<h3>Troca de Valores</h3>
+
+    <label for="valorA">Valor de A: </label>
+    <input type="number" id="valorA"><br><br>
+
+    <label for="valorB">Valor de B: </label>
+    <input type="number" id="valorB"><br><br>
+
+    <button onclick="trocarValores()">Trocar Valores</button><br><br>
+
+<p id="resultado"></p>
+
+<script>
+    function trocarValores() {
+// Entradas
+    let a = parseFloat(document.getElementById("valorA").value);
+    let b = parseFloat(document.getElementById("valorB").value);
+
+// Processamento
+    let temp = a;
+    a = b;
+    b = temp;
+
+// Saída
+    document.getElementById("resultado").innerHTML = `Valor de A: ${a}<br>Valor de B: ${b}`;
+}
+</script>
+</body>
+</html>
+

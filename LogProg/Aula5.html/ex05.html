@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>VOTO!</title>
+        <script language="javascript" type="text/javascript">
+            function mostarSituacao() {
+                var idade = document.getElementById("idade").value;
+                var display = document.getElementById("display");
+                var mensagem = " "; 
+                if ((idade > 15 && idade < 18 ) || idade > 70)  {
+                 display.innerHTML = "O voto é opcional!";
+                } else if (idade < 16 )   { 
+                 display.innerHTML = "Você não pode votar!";
+                } else {
+                    display.innerHTML = "Você é obrigado a votar!";
+
+                }
+
+            }
+            
+        </script>
+    </head>
+    <body>
+        Digite um numero:<input type="text" id="idade" size="5" />
+        <input type="button" value="mostrar" onclick="mostarSituacao()" />
+        <br/><p id="display" ><i>Situação</i></p>
+
+    </body>
+
+</html>

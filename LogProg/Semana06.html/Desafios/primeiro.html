@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Exercício 05</title>
+        <script language="javascript" type="text/javascript">
+            function mostarSituacao(){
+                var display = document.getElementById("display");
+                var mensagem = " ";
+                for (contador=300; contador >= 0; contador--) {
+                    if (contador%7 == 0) {
+                    mensagem += contador+"<br/>";
+
+                    }
+                
+                }
+                display.innerHTML = mensagem;
+            }
+            </script>
+        </head>
+        <body>
+            Digite um número:<input type="text" id="numero" size="5" />
+            <input type="button" value="Mostrar" onclick="mostarSituacao()" />
+            <br/><p id="display" ><i>Situação</i></p>
+        </body>
+</html>

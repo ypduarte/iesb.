@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Aula 6!</title>
+        <script language="javascript" type="text/javascript"> 
+          function mostarSituação() {
+            var salario = Number.parseFloat(document.getElementById("salario").value);
+            var display = document.getElementById("display");
+            var mensagem = " ";
+            do {
+                salario+= 100;
+                mensagem += "O salário ainda é R$" + salario + "<br/>";
+            }while (salario < 5000) 
+                 
+            display.innerHTML = mensagem;
+
+          }
+        </script>
+    </head>
+    <body>
+        Digite sua idade:<input type="text" id="salario" size="5" />
+        <input type="button" value="Mostrar" onclick="mostarSituação()" />
+        <br/><p id="display" ><i>Situação</i></p>   
+    </body>
+
+
+
+</html>

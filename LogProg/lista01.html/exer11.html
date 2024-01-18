@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 da Lista</title>
+    <style>
+        body{
+            background-color:black; 
+            color:rgb(222, 202, 240);
+            font: normal 20pt Arial
+
+        }
+        h1{ 
+            color:rgb(217, 46, 233)
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Aluna: Paloma Duarte <br/>
+            Matricula: 23114290179</h1>
+    
+        <h2>IESB OESTE Turma: OADSNM1AC</h2>
+    
+    <h3></h3>
+
+    <form>
+        <label for="precoCusto">Preço de custo:</label>
+        <input type="number" id="precoCusto" name="precoCusto"><br>
+        
+        <label for="percentualAumento">Percentual de acréscimo:</label>
+        <input type="number" id="percentualAumento" name="percentualAumento"><br>
+        
+        <button type="button" onclick="calcularValorDeVenda()">Calcular valor de venda</button>
+        </form>
+        
+        <div id="resultado"></div>
+
+        <script>
+            function calcularValorDeVenda() {
+// Obter o preço de custo do produto e o percentual de acréscimo informado pelo usuário
+var precoCusto = parseFloat(document.getElementById("precoCusto").value);
+var percentualAumento = parseFloat(document.getElementById("percentualAumento").value);
+
+// Calcular o valor de venda a partir do preço de custo e do percentual de acréscimo
+var precoVenda = precoCusto * (1 + (percentualAumento / 100));
+
+// Exibir o valor de venda na página
+document.getElementById("resultado").innerHTML = "O valor de venda é: R$ " + precoVenda.toFixed(2);
+}
+        </script>
+        </body>
+        </html>

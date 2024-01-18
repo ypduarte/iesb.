@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercício 14 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(217, 46, 233)
+    }
+</style>
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+<h3>Encontrar o maior valor</h3>
+
+<p>Insira dois valores inteiros distintos:</p>
+
+<input type="text" id="valor1">
+<input type="text" id="valor2">
+
+<button onclick="encontrarMaior()">Encontrar o maior</button>
+
+<p id="resultado"></p>
+
+<script>
+function encontrarMaior() {
+// Ler os valores dos inputs
+var valor1 = parseInt(document.getElementById("valor1").value);
+var valor2 = parseInt(document.getElementById("valor2").value);
+
+// Verificar se os valores são diferentes
+if (valor1 != valor2) {
+// Encontrar o maior valor
+var maior = valor1 > valor2 ? valor1 : valor2;
+
+// Exibir o resultado
+document.getElementById("resultado").innerHTML = "O maior valor é: " + maior;
+} else {
+// Se os valores forem iguais, exibir mensagem de erro
+document.getElementById("resultado").innerHTML = "Os valores devem ser diferentes!";
+}
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício 07 da Lista</title>
+<style>
+    body{
+        background-color:black; 
+        color:rgb(222, 202, 240);
+        font: normal 20pt Arial
+
+    }
+    h1{ 
+        color:rgb(48, 211, 240)
+    }
+</style>
+</head>
+<body>
+    <h1>Aluna: Paloma Duarte <br/>
+        Matricula: 23114290179</h1>
+
+    <h2>IESB OESTE Turma: OADSNM1AC</h2>
+
+<h3>Conversor de Temperatura</h3>
+
+<form>
+    <label for="celsius">Temperatura em Celsius:</label>
+    <input type="number" id="celsius" name="celsius" required>
+    <button type="button" id="converter">Converter</button>
+    </form>
+
+<p id="resultado"></p>
+
+<script>
+// Seleciona o botão e adiciona um evento de clique
+    document.getElementById("converter").addEventListener("click", function() {
+// Lê o valor do campo de entrada
+    var celsius = parseFloat(document.getElementById("celsius").value);
+
+// Calcula a temperatura em Fahrenheit
+    var fahrenheit = (9 * celsius + 160) / 5;
+
+// Exibe o resultado na página
+    document.getElementById("resultado").innerHTML = celsius + " graus Celsius equivalentes a " + fahrenheit.toFixed(2) + " graus Fahrenheit.";
+});
+</script>
+</body>
+</html>
+
